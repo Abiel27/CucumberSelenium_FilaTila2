@@ -5,5 +5,5 @@ Feature: Simple examples of how dataTable works
     Given user is on log in page of soloLearn
     When user enters below info
     |username|abielmenghistu@gmail.com|
-    |password|PageObjectModel@27|
+    |password|asdf@28ASDF|
     Then user should see title changed to Abiel Menghistu

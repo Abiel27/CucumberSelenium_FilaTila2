@@ -8,8 +8,8 @@ import org.junit.runner.RunWith;
         plugin = "html:target/cucumber-report1.html",
         features ="src/test/resources/features",
         glue = "com/serena_and_Lily/step_definitions",
-        dryRun = false,
-        tags = "@list"
+        dryRun =  false,
+        tags = "@zxc"
 )
 public class CukesRunner {
 
