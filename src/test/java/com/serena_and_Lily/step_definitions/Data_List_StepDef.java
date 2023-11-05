@@ -77,7 +77,7 @@ public class Data_List_StepDef {
 
         Select monthDropdown = new Select(dropDownsPage.monthDropdown);
             //Methos from framework utility
-        //Assert.assertTrue(expectedList.equals(BrowserUtils.getElementText(monthDropdown.getOptions())));
+//        Assert.assertTrue(expectedList.equals(BrowserUtils.getElementText(monthDropdown.getOptions())));
 
 
         List<WebElement> monthWebElement = monthDropdown.getOptions();

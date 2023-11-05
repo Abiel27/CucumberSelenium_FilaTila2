@@ -3,6 +3,7 @@ package com.serena_and_Lily.Utilities;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class Driver {
 
@@ -15,6 +16,7 @@ public class Driver {
         if (driver== null){
             System.out.println("Creating object first time");
             WebDriverManager.chromedriver().setup();
+
             driver= new ChromeDriver();
             driver.manage().window().maximize();
             return driver;

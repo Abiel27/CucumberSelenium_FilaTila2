@@ -1,15 +1,18 @@
 package com.serena_and_Lily.Utilities;
 
 import org.junit.Assert;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class BrowserUtils {
+public class BrowserUtils  {
+
+
     /*
     this method accept List<WebElement> convert it to List<String>
-
      */
     public static List<String> getElementText(List<WebElement> webElementList){
 
@@ -40,19 +43,49 @@ public class BrowserUtils {
     }
 
 
-    public static void waits(int second){
-    //
+    public static void waits(int second) {
+        //
 
-    /*
-     *waiting for x seconds without handling exception
-     * @param second
-     */
+        /*
+         *waiting for x seconds without handling exception
+         * @param second
+         */
 
         try {
-        Thread.sleep(second *1000);
-    } catch (InterruptedException e) {
+            Thread.sleep(second * 1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+    public static void acceptIt() {
+        try {
+
+            Alert alert = Driver.getDriver().switchTo().alert();
+            alert.accept();
+        }catch (Exception e) {
+            e.printStackTrace();
+
+    }
+
+    }
+    public void dismisIT(){
+        try {
+
+        Alert alert = Driver.getDriver().switchTo().alert();
+        alert.dismiss();
+
+        }catch (Exception e) {
+            e.printStackTrace();
+    }
+
+}
+public static void sendText(By locator, String data) throws Exception {
+    try {
+
+        Alert alert = Driver.getDriver().switchTo().alert();
+        alert.sendKeys(data);
+
+    } catch (Exception e) {
         e.printStackTrace();
     }
-}
-}
-
+}}
